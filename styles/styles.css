@@ -1,20 +1,24 @@
+/* Importing Fonts */
 @import url('https://fonts.googleapis.com/css?family=Marcellus:200,300,regular,500,600');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Reset and Base Styles */
 * {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
 }
 
+/* Header and Navbar */
 .header {
     display: flex;
     height: 80px;
     background-color: #fff;
     align-items: center;
     justify-content: space-between;
-    padding:0 5vh 0 5vh;
+    padding: 0 5vh;
+    position: relative;
 }
 
 .navbar_container {
@@ -40,8 +44,7 @@
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease-in-out;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 .nav_item::before {
@@ -65,13 +68,36 @@
 }
 
 .logo {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     font-weight: bolder;
     color: #252525;
     cursor: pointer;
 }
 
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 2px;
+    background-color: #252525;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hide the checkbox */
+.nav-toggle {
+    display: none;
+}
+
+
+/* Hero Section */
 .container {
     background-image: url('../public/home-shoe.jpg');
     min-height: 600px;
@@ -84,46 +110,36 @@
     align-items: center;
 }
 
-.home-content{
+.home-content {
     font-family: 'Marcellus', serif;
     padding-left: 40px;
-}
-
-.home-content h1,h3,p{
-    font-family: 'Marcellus', serif;
     color: #fff;
-    font-weight: 500;
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 80px;
     line-height: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
 
-.home-content h3{
+.home-content h3 {
     font-weight: 200;
     font-size: 18px;
 }
 
-.home-content p{
+.home-content p {
     font-weight: lighter;
     max-width: 35ch;
-}
-
-.home-content {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 18px;
 }
 
 .primary-btn {
     width: fit-content;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 25px;
     margin-top: 20px;
     background-color: #fff;
     border: 1px solid transparent;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -135,29 +151,28 @@
     border: 1px solid #fff;
 }
 
-/* ----------------------------------------------------*/
-
-#trending-section{
+/* Trending Section */
+#trending-section {
     color: #000;
     margin-top: 30px;
     background-color: #fff;
-    height: 5000px;
+    padding: 20px;
 }
 
-.trd-header{
+.trd-header {
     text-align: center;
 }
 
-.trd-header h3{
+.trd-header h3 {
     color: #000;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 100;
 }
 
-.trd-header h1{
+.trd-header h1 {
     font-size: 40px;
-    font-family: 'Marcellus';
+    font-family: 'Marcellus', serif;
     font-weight: 400;
 }
 
@@ -167,53 +182,52 @@
     margin: 20px;
     justify-content: space-between;
     gap: 20px;
-}   
-
-
-.card img{
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.card h4{
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 22px;
-    padding-top: 10px;
-    line-height: 20px;
-}
-
-.card p{
-    font-family: 'Montserrat';
-    font-size: 15px;
-    color: #000;
-    position: relative;
-}
-
-.product-info{
-    margin-left: 8px;
-    margin-bottom: 20px;
-}
-.card span{
-    font-weight: 600;
-    font-family: 'Poppins';
-    font-size: 18px;
-    color: #000;
-    padding-top: 3px;
-}
-
-.card span s{
-    color: rgb(82, 82, 82);
 }
 
 .card {
-    position: relative; /* Ensure the overlay can be positioned inside the card */
+    position: relative;
     flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
     min-width: 200px;
     box-shadow: 0 5px 5px #e1e1e1;
     margin-bottom: 20px;
     border-radius: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-info {
+    margin-left: 8px;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 10px;
+    line-height: 20px;
+}
+
+.card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+
+.card span {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #000;
+    padding-top: 3px;
+}
+
+.card span s {
+    color: rgb(82, 82, 82);
 }
 
 .overlay-button {
@@ -227,45 +241,151 @@
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    z-index: 10; /* Ensure the overlay is above other elements */
+    z-index: 10;
 }
 
-/* Example styling for a star icon (if you have one) */
 .overlay-button::before {
-    content: '★'; /* Example star character */
+    content: '★';
     margin-right: 5px;
     color: #000;
 }
 
-
-
-
-
-
-
-
-
-
+/* Media Queries */
 @media (max-width: 1200px) {
     .card {
-        flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+        flex: 1 1 calc(33.333% - 20px);
         max-width: calc(33.333% - 20px);
     }
 }
 
 @media (max-width: 900px) {
+    .container {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+
+    .home-content h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
     .card {
-        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+        flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
+    }
+
+    .nav_items {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav_item {
+        padding: 15px 0 0 15px;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #e1e1e1;
+        background-color: #fff;
+    }
+
+    /* When checkbox is checked, show the menu */
+    .nav-toggle:checked + .hamburger-menu + .nav_items {
+        display: flex;
+    }
+
+    /* Rotate and animate the hamburger menu icon */
+    .nav-toggle:checked + .hamburger-menu span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-toggle:checked + .hamburger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked + .hamburger-menu span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 30px;
     }
 }
 
 @media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav_item {
+        font-size: 16px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .home-content h3 {
+        font-size: 16px;
+    }
+
+    .primary-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
     .card {
-        flex: 1 1 calc(100% - 20px); /* One card per row */
+        flex: 1 1 calc(100% - 20px);
         max-width: calc(100% - 20px);
     }
 }
+
+@media (max-width: 400px) {
+    .header {
+        padding: 5px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav_item {
+        font-size: 14px;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .home-content h3 {
+        font-size: 14px;
+    }
+
+    .primary-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
