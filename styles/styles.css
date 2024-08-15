@@ -8,7 +8,9 @@
     /* MOBILE SCREEN SIZE */
     --mobile-h1: 30px;
     --mobile-h3: 10px;
-    --mobile-h4: 20px;
+    --mobile-h4: 18px;
+    --mobile-p : 15px
+
     --medium-h1: 20px;
 
 }
@@ -162,7 +164,7 @@
 }
 
 /* Trending Section */
-#trending-section {
+section {
     color: #000;
     margin-top: 30px;
     background-color: #fff;
@@ -263,7 +265,31 @@
     color: #000;
 }
 
+.new-content-container {
+    background-image: url('../public/shoe pair.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+}
+
+.new-content {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background for the text box */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Rounded corners for the text box */
+    backdrop-filter: blur(10px); /* Apply blur to the background of the text box */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: #fff; /* Text color for better readability */
+    max-width: 600px; /* Limit the width of the text box */
+    margin: 0 auto; /* Center the text box */
+    text-align: center; /* Center align the text */
+}
+
 /* Media Queries */
+
+
 @media (max-width: 1200px) {
     .card {
         flex: 1 1 calc(33.333% - 20px);
@@ -422,6 +448,14 @@
     /*Product Card*/
     .card h4 {
         font-size: var(--mobile-h4);
+    }
+
+    .card p{
+        font-size: var(--mobile-p);
+    }
+
+    .card span{
+        font-size: 18px;
     }
 }
 
